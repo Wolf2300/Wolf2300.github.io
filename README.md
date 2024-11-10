@@ -11,7 +11,7 @@ We are committed to provide you the most hygienic food in Delhi NCR
 <body>
   <!-- Header Section -->
   <header>
-    <h1>GOL CHAKKAR CENTAL</h1>
+    <h1>GOL CHAKKAR CENTRAL</h1>
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
