@@ -1,151 +1,148 @@
 # Wolf2300.github.io
 We are committed to provide you the most hygienic food in Delhi NCR
-/* Reset Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProTrade - Professional Trading Platform</title>
+  <style>
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* Basic Styles */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
+    body {
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      background: #141e30; /* Fallback for older browsers */
+      background: -webkit-linear-gradient(to right, #243b55, #141e30);
+      background: linear-gradient(to right, #243b55, #141e30);
+      transition: background 0.3s ease-in-out;
+    }
 
-/* Header */
-header {
-  background: linear-gradient(135deg, #2a5298, #1e3c72);
-  color: #fff;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
+    /* Navigation Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
 
-header nav a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .navbar a {
+      text-decoration: none;
+      color: #ffffff;
+      margin: 0 1rem;
+      transition: color 0.3s;
+    }
 
-header nav a:hover {
-  color: #ffdd57;
-}
+    .navbar a:hover {
+      color: #ff7b00;
+    }
 
-/* Hero Section */
-#hero {
-  background: linear-gradient(135deg, #ffdd57, #ff8a00);
-  color: #333;
-  padding: 4rem 2rem;
-  text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  margin: 2rem 1rem;
-}
+    /* Section Styles */
+    .section {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+      background-size: cover;
+    }
 
-#hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
+    .section h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
 
-#hero p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
+    .section p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
 
-#hero button {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  background: #1e3c72;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-}
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      background-color: #243b55;
+    }
+  </style>
+</head>
+<body>
 
-#hero button:hover {
-  background: #2a5298;
-}
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" onclick="navigateTo('home')">Home</a>
+      <a href="#" onclick="navigateTo('features')">Features</a>
+      <a href="#" onclick="navigateTo('pricing')">Pricing</a>
+      <a href="#" onclick="navigateTo('contact')">Contact</a>
+    </div>
+  </nav>
 
-/* Sections */
-section {
-  padding: 4rem 2rem;
-  text-align: center;
-  border-radius: 8px;
-  margin: 2rem 1rem;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
+  <!-- Dynamic Section -->
+  <section id="dynamic-content" class="section">
+    <!-- Content changes dynamically based on navigation -->
+  </section>
 
-#about {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: #fff;
-}
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 ProTrade - Your Partner in Professional Trading</p>
+  </footer>
 
-#services {
-  background: #f3f4f6;
-}
+  <!-- JavaScript for Dynamic Content -->
+  <script>
+    const sections = {
+      home: {
+        title: "Welcome to ProTrade",
+        content: "Trade smarter and achieve your financial goals with our state-of-the-art tools and resources. Start trading now!",
+        background: "linear-gradient(to right, #243b55, #141e30)"
+      },
+      features: {
+        title: "Features",
+        content: "Explore powerful trading tools, real-time market data, and a range of analytical options designed for success.",
+        background: "linear-gradient(to right, #0072ff, #00c6ff)"
+      },
+      pricing: {
+        title: "Pricing Plans",
+        content: "Choose from flexible plans to match your trading style and goals. We offer competitive and transparent pricing.",
+        background: "linear-gradient(to right, #ff512f, #dd2476)"
+      },
+      contact: {
+        title: "Contact Us",
+        content: "Have questions or need support? Reach out to us, and we will be happy to assist you.",
+        background: "linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b)"
+      }
+    };
 
-#services .service {
-  background: #fff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin: 1rem 0;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
+    function navigateTo(page) {
+      const content = sections[page];
+      if (content) {
+        document.getElementById("dynamic-content").innerHTML = `
+          <h1>${content.title}</h1>
+          <p>${content.content}</p>
+        `;
+        document.body.style.background = content.background;
+      }
+    }
 
-#services h3 {
-  color: #1e3c72;
-}
+    // Load Home Page by Default
+    navigateTo('home');
+  </script>
+</body>
+</html>
 
-#contact {
-  background: linear-gradient(135deg, #ff8a00, #ffdd57);
-  color: #333;
-}
-
-#contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-#contact form label {
-  margin-top: 10px;
-}
-
-#contact form input,
-#contact form textarea,
-#contact form button {
-  padding: 0.75rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-#contact form button {
-  background: #1e3c72;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-#contact form button:hover {
-  background: #2a5298;
-}
-
-/* Footer */
-footer {
-  background: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-  margin-top: 2rem;
-}
 
